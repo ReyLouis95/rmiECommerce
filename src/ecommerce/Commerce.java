@@ -12,28 +12,22 @@ public class Commerce extends UnicastRemoteObject implements commerceInterface{
 	public Commerce() throws RemoteException
 	{
 		super();
-	}
+		this.magasinActuel = new Magasin("Ikea"); //Création d'un magasin dès l'instanciation d'un objet commerce. /!\ A MODIFIER EN FAISANT UNE METHODE QUI CREE UN MAGASIN DANS UNE HASHTABLE DE MAGASINS
+	}												// DONT LE CLIENT POURRA CHOISIR SUR QUEL MAGASIN PEUT SE CONNECTER
 	
 	public String testConnect() throws RemoteException
 	{
 		return "Connexion correctement établie";
 	}
 	
-	public String connectToMagasin()
+	public ArrayList<Produit> listeProduitsMagasin() //Affiche la liste des produits d'un magasin
 	{
-		this.magasinActuel = new Magasin("Ikea");
-		
-		return "Connexion réussie";
+		return this.magasinActuel.listProduit;
 	}
 	
-	public ArrayList<Produit> listeProduitsMagasin()
+	public void enleverAjouterProduit(String s, boolean b) //b à true = ajouter, b à false = enlever
 	{
-		return this.magasinActuel.produit;
-	}
-	
-	public void eneleverAjouterProduit(String s, boolean b) //b à true = ajouter, b à false = enlever
-	{
-		for(Produit p : magasinActuel.produit)
+		for(Produit p : magasinActuel.listProduit)
 		{
 			if(p.nom.equals(s))
 			{

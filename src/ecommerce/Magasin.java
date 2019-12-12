@@ -7,9 +7,8 @@ public class Magasin {
 	public ArrayList<Produit> listProduit;
 	public String nom;
 	
-	public Magasin(ArrayList<Produit> listProduit, String nom)
+	public Magasin(String nom)
 	{
-		this.listProduit = listProduit;
 		this.nom = nom;
 	}
 	/**
