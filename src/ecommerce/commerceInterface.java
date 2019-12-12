@@ -7,6 +7,6 @@ import java.util.ArrayList;
 public interface commerceInterface extends Remote{
 	
 	String testConnect() throws RemoteException;
-	ArrayList<Produit> listeProduitsMagasin() throws RemoteException;
+	String listeProduitsMagasin() throws RemoteException;
 	void enleverAjouterProduit(String s, boolean b) throws RemoteException;
 }

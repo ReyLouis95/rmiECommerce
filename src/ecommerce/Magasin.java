@@ -1,8 +1,9 @@
 package ecommerce;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Magasin {
+public class Magasin implements Serializable{
 
 	public ArrayList<Produit> listProduit;
 	public String nom;
@@ -20,6 +21,15 @@ public class Magasin {
 		this.listProduit.add(produit);
 	}
 	
+	public String listeDesProduits()
+	{
+		String t = "";
+		for(Produit p : listProduit)
+		{
+			t = t + "Nom du produit : " + p.nom + "\nprix du produit : " + p.prix + "\n\n";
+		}
+		return t;
+	}
 	/**
 	 * retire un produit dans la liste de Produit
 	 * @param produitAEnlever: produit a retirer de la liste

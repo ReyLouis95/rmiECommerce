@@ -1,6 +1,8 @@
 package ecommerce;
 
-public class Produit {
+import java.io.Serializable;
+
+public class Produit implements Serializable{
 
 	public double prix;
 	public String nom;

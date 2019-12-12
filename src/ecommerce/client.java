@@ -11,7 +11,7 @@ public class client {
 			commerceInterface objCommerce = (commerceInterface)Naming.lookup("rmi://localhost:"+port+"/commerce");
 			
 			objCommerce.testConnect();
-			objCommerce.listeProduitsMagasin();
+			System.out.println(objCommerce.listeProduitsMagasin());
 		}
 		
 		catch (Exception e)
