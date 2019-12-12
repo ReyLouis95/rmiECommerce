@@ -24,9 +24,9 @@ public class Commerce extends UnicastRemoteObject implements commerceInterface{
 		this.magasinActuel = m;
 	}
 	
-	public ArrayList<Produit> listeProduitsMagasin() throws RemoteException//Affiche la liste des produits d'un magasin
+	public String listeProduitsMagasin() throws RemoteException//Affiche la liste des produits d'un magasin
 	{
-		return this.magasinActuel.listProduit;
+		return this.magasinActuel.listeDesProduits();
 	}
 	
 	public void enleverAjouterProduit(String s, boolean b) throws RemoteException //b à true = ajouter, b à false = enlever
