@@ -10,6 +10,11 @@ public class Produit {
 		this.nom = nom;
 	}
 	
+	/**
+	 * compare deux objets produits
+	 * @param produit: produit a comparer
+	 * @return true si les deux produits sont identiques, sinon false.
+	 */
 	public boolean Equals(Produit produit) {
 		if(this.nom.equals(produit.nom) && this.prix == produit.prix)
 			return true;
