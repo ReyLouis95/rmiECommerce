@@ -14,7 +14,7 @@ public class BanqueImpl extends UnicastRemoteObject implements BanqueInterface{
 	public Hashtable<String, CompteBanque> liste = new Hashtable<String, CompteBanque>();
 	@Override
 	public void creerCompte(String id, double sommeInitiale) throws RemoteException {
-		liste.put(id, new  CompteBanque(new Position(1000)));
+		liste.put(id, new CompteBanque(new Position(1000)));
 	}
 
 	@Override 
