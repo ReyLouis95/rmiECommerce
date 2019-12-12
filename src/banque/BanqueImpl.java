@@ -17,7 +17,7 @@ public class BanqueImpl extends UnicastRemoteObject implements BanqueInterface{
 		liste.put(id, new CompteBanque(new Position(1000)));
 	}
 
-	@Override
+	@Override 
 	public void ajouter(String id, double somme) throws RemoteException {
 		CompteBanque a = liste.get(id);
 		a.ajouterSomme(somme);
