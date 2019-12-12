@@ -15,7 +15,6 @@ public class Serveur {
 			Produit p = new Produit(12, "bete");
 			Magasin m = new Magasin("Ikea");
 			m.ajouterProduit(p);
-			
 			c.changerMagasin(m);
 			
 			

@@ -10,6 +10,7 @@ public class Magasin {
 	public Magasin(String nom)
 	{
 		this.nom = nom;
+		this.listProduit = new ArrayList<Produit>();
 	}
 	/**
 	 * ajoute un produit dans la liste de Produit
