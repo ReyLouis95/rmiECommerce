@@ -2,8 +2,6 @@ package ecommerce;
 
 import java.rmi.Naming;
 
-import rmi.BanqueInterface;
-
 public class client {
 	public static void main (String[] argv)
 	{
