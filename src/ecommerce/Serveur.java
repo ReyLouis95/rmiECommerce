@@ -10,7 +10,16 @@ public class Serveur {
 		{
 			int port = 8000;
 			LocateRegistry.createRegistry(port);
-			Naming.rebind("rmi://localhost:"+port+"/commerce", new Commerce());
+			
+			Commerce c = new Commerce();
+			Produit p = new Produit(12, "bete");
+			Magasin m = new Magasin("Ikea");
+			m.ajouterProduit(p);
+			
+			c.changerMagasin(m);
+			
+			
+			Naming.rebind("rmi://localhost:"+port+"/commerce", c);
 			System.out.println("Serveur commerce prêt !");
 		}
 		catch (Exception e)
