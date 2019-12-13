@@ -15,7 +15,6 @@ public class client {
 			objCommerce.animation();
 			
 		}
-		
 		catch (Exception e)
 		{
 			System.out.println("CommerceClient exception : " + e);
