@@ -1,17 +1,19 @@
 package ecommerce;
 
 import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
 
 public class client {
-	public static void main (String[] argv)
-	{
+	public static void main (String[] argv) {
 		try 
 		{
 			int port = 8000;
-			commerceInterface objCommerce = (commerceInterface)Naming.lookup("rmi://localhost:"+port+"/commerce");
+			Hello objCommerce = (Hello)Naming.lookup("rmi://localhost:"+port+"/commerce");
 			
-			objCommerce.testConnect();
-			System.out.println(objCommerce.listeProduitsMagasin());
+			objCommerce.animation();
+			
 		}
 		
 		catch (Exception e)
@@ -19,4 +21,4 @@ public class client {
 			System.out.println("CommerceClient exception : " + e);
 		}
 	}
-}
+	}

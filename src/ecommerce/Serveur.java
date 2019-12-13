@@ -10,7 +10,7 @@ public class Serveur {
 		{
 			int port = 8000;
 			LocateRegistry.createRegistry(port);
-			
+			FXSample f = new FXSample();
 			Commerce c = new Commerce();
 			Produit p = new Produit(12, "bete");
 			Magasin m = new Magasin("Ikea");
@@ -18,7 +18,7 @@ public class Serveur {
 			c.changerMagasin(m);
 			
 			
-			Naming.rebind("rmi://localhost:"+port+"/commerce", c);
+			Naming.rebind("rmi://localhost:"+port+"/commerce", f);
 			System.out.println("Serveur commerce prêt !");
 		}
 		catch (Exception e)
