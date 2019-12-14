@@ -1,17 +1,29 @@
-package ecommerce;
+package models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Magasin implements Serializable{
 
-	public ArrayList<Produit> listProduit;
-	public String nom;
+	private ArrayList<Produit> listProduit;
+	private String nom;
 	
 	public Magasin(String nom)
 	{
 		this.nom = nom;
 		this.listProduit = new ArrayList<Produit>();
+	}
+	public ArrayList<Produit> getListProduit() {
+		return listProduit;
+	}
+	public void setListProduit(ArrayList<Produit> listProduit) {
+		this.listProduit = listProduit;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	/**
 	 * ajoute un produit dans la liste de Produit

@@ -1,4 +1,4 @@
-package ecommerce;
+package models;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -31,7 +31,7 @@ public class Commerce extends UnicastRemoteObject implements commerceInterface{
 	
 	public void enleverAjouterProduit(String s, boolean b) throws RemoteException //b à true = ajouter, b à false = enlever
 	{
-		for(Produit p : magasinActuel.listProduit)
+		for(Produit p : magasinActuel.getListProduit())
 		{
 			if(p.nom.equals(s))
 			{

@@ -8,7 +8,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="239.0" layoutY="32.0" text="Choisir le magasin" />
-      <ListView layoutX="194.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="273.0" layoutY="157.0" text="Magasin" />
+      <ListView fx:id="listView" layoutX="194.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="label1" layoutX="273.0" layoutY="157.0" />
    </children>
 </Pane>

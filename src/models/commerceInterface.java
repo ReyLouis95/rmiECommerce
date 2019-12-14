@@ -1,4 +1,4 @@
-package ecommerce;
+package models;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

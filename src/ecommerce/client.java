@@ -10,10 +10,8 @@ public class client {
 		try 
 		{
 			int port = 8000;
-			Hello objCommerce = (Hello)Naming.lookup("rmi://localhost:"+port+"/commerce");
-			
+			IAccueilControleur objCommerce = (IAccueilControleur)Naming.lookup("rmi://localhost:"+port+"/commerce");
 			objCommerce.animation();
-			
 		}
 		catch (Exception e)
 		{
