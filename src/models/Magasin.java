@@ -7,7 +7,14 @@ public class Magasin implements Serializable{
 
 	private ArrayList<Produit> listProduit;
 	private String nom;
-	
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public Magasin(String nom)
 	{
 		this.nom = nom;
@@ -32,7 +39,7 @@ public class Magasin implements Serializable{
 	public void ajouterProduit(Produit produit) {
 		this.listProduit.add(produit);
 	}
-	
+
 	public String listeDesProduits()
 	{
 		String t = "";

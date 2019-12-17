@@ -1,16 +1,18 @@
-package ecommerce;
+package client;
 
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+import ecommerce.IStart;
+
 
 public class client {
 	public static void main (String[] argv) {
-		try 
+		try
 		{
 			int port = 8000;
-			IAccueilControleur objCommerce = (IAccueilControleur)Naming.lookup("rmi://localhost:"+port+"/commerce");
+			IStart objCommerce = (IStart)Naming.lookup("rmi://localhost:"+port+"/commerce");
 			objCommerce.animation();
 		}
 		catch (Exception e)
